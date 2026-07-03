@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nguyễn Anh Quân | Portfolio</title>
+  <meta name="description"
+    content="Personal portfolio of Nguyễn Anh Quân — IT Graduate, 3D Artist & Game Designer based in Ho Chi Minh City." />
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap"
+    rel="stylesheet" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            primary: '#5900b3',
+            secondary: '#0033cc',
+            accent: '#7a00e6',
+          },
+          fontFamily: {
+            sans: ['Space Grotesk', 'Inter', 'sans-serif'],
+          },
+        }
+      }
+    }
+  </script>
+
+  <!-- Lucide Icons CDN -->
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body class="font-sans antialiased">
+
+  <div id="root">
+    <div id="nav-root"></div>
+    <main>
+      <div id="hero-root"></div>
+      <div id="about-root"></div>
+      <div id="skills-root"></div>
+      <div id="projects-root"></div>
+      <div id="experience-root"></div>
+      <div id="contact-root"></div>
+    </main>
+    <div id="footer-root"></div>
+  </div>
+  <!-- Script -->
+  <script type="module" src="./js/main.js"></script>
+</body>
+
+</html>

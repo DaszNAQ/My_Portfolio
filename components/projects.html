@@ -1,0 +1,35 @@
+<section id="projects" class="py-8 md:py-12 relative">
+  <div class="max-w-6xl mx-auto px-4 md:px-8">
+    <h2 class="section-title reveal" data-i18n="projects_title">Projects</h2>
+    <div class="relative">
+      <!-- Carousel -->
+      <div id="project-carousel" 
+           class="relative h-[380px] sm:h-[420px] md:h-[520px] flex items-center justify-center overflow-hidden">
+        
+        <div id="projects-track" 
+             class="flex items-center transition-transform duration-700 ease-out">
+          <!-- JS render -->
+        </div>
+      </div>
+
+      <!-- Arrows - Ẩn bớt trên mobile nếu cần -->
+      <button id="prev-btn"
+        class="absolute left-2 sm:left-4 md:left-6 top-1/2 -translate-y-1/2 
+               w-9 h-9 sm:w-11 sm:h-11 md:w-12 md:h-12 
+               bg-black/70 hover:bg-black/90 backdrop-blur-md rounded-2xl 
+               flex items-center justify-center text-white text-2xl md:text-3xl z-30">
+        ←
+      </button>
+      
+      <button id="next-btn"
+        class="absolute right-2 sm:right-4 md:right-6 top-1/2 -translate-y-1/2 
+               w-9 h-9 sm:w-11 sm:h-11 md:w-12 md:h-12 
+               bg-black/70 hover:bg-black/90 backdrop-blur-md rounded-2xl 
+               flex items-center justify-center text-white text-2xl md:text-3xl z-30">
+        →
+      </button>
+
+      <div id="project-dots" class="flex justify-center gap-3 mt-8 md:mt-10"></div>
+    </div>
+  </div>
+</section>

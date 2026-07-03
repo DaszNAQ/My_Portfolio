@@ -1,0 +1,50 @@
+<!-- components/navbar.html -->
+<nav id="navbar" class="nav-glass fixed top-0 left-0 right-0 z-50 border-b border-white/10">
+  <div class="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between">
+    
+    <!-- Logo -->
+    <div class="text-2xl font-bold gradient-text tracking-tight">NAQ</div>
+
+    <!-- Desktop Menu -->
+    <div class="hidden md:flex items-center gap-8 text-xl font-medium">
+      <a href="#home" class="nav-link scroll-link" data-i18n="nav_home">Home</a>
+      <a href="#about" class="nav-link scroll-link" data-i18n="nav_about">About</a>
+      <a href="#skills" class="nav-link scroll-link" data-i18n="nav_skills">Skills</a>
+      <a href="#projects" class="nav-link scroll-link" data-i18n="nav_projects">Projects</a>
+      <a href="#experience" class="nav-link scroll-link" data-i18n="nav_experience">Experience</a>
+      <a href="#contact" class="nav-link scroll-link" data-i18n="nav_contact">Contact</a>
+    </div>
+
+    <!-- Right Side Controls -->
+    <div class="flex items-center gap-4">
+      
+      <!-- Theme Toggle -->
+      <button id="themeToggle" class="w-9 h-9 flex items-center justify-center text-xl hover:text-primary transition-colors">
+        <i class="fa-solid fa-moon dark-hidden"></i>
+        <i class="fa-solid fa-sun light-hidden"></i>
+      </button>
+
+      <!-- Language Toggle -->
+      <button id="langToggle" 
+              class="lang-btn px-4 py-2 text-sm font-semibold border border-white/20 rounded-xl hover:border-primary transition-colors">
+      </button>
+
+      <!-- Mobile Menu Button -->
+      <button id="mobileMenuBtn" class="md:hidden w-9 h-9 flex items-center justify-center text-2xl">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div id="mobileMenu" class="hidden md:hidden fixed inset-0 bg-black/95 z-40 pt-20">
+    <div class="flex flex-col items-center gap-8 text-xl">
+      <a href="#home" class="mobile-nav-link scroll-link">Home</a>
+      <a href="#about" class="mobile-nav-link scroll-link">About</a>
+      <a href="#skills" class="mobile-nav-link scroll-link">Skills</a>
+      <a href="#projects" class="mobile-nav-link scroll-link">Projects</a>
+      <a href="#experience" class="mobile-nav-link scroll-link">Experience</a>
+      <a href="#contact" class="mobile-nav-link scroll-link">Contact</a>
+    </div>
+  </div>
+</nav>

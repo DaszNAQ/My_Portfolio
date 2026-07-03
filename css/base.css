@@ -1,0 +1,29 @@
+/* ─────────────────────────────────────────────
+   RESET & BASE
+───────────────────────────────────────────── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* ─────────────────────────────────────────────
+   CSS CUSTOM PROPERTIES — COLOR SYSTEM
+───────────────────────────────────────────── */
+:root {
+  --bg:        #00001a;
+  --bg-alt:    #020218;
+  --surface:   rgba(255,255,255,0.04);
+  --border:    rgba(255,255,255,0.08);
+  --primary:   #5900b3;
+  --primary-h: rgb(89,0,179);
+  --secondary: #0033cc;
+  --accent:    #7a00e6;
+  --text:      #f0f0f5;
+  --text-muted:#9090b0;
+  --radius:    0.75rem;
+}
