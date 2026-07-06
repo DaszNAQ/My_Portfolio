@@ -44,7 +44,7 @@ export const translations = {
     projects_title:        "Projects",
     projects_view:         "View Project",
     projects_1_title:      "Job Tracker",
-    projects_1_desc:       "A web app to track  applications, statuses, and interview schedules",
+    projects_1_desc:       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since 1966, when designers at Letraset and James Mosley, the librarian at St Bride Printing Library in London.",
     projects_2_title:      "Portfolio Website",
     projects_2_desc:       "Personal portfolio showcasing skills, projects, and professional experience",
     projects_3_title:      "UI Showcase",
