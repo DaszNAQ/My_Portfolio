@@ -14,7 +14,7 @@ export function initProjectsCarousel() {
         title: dict.projects_1_title,
         desc: dict.projects_1_desc,
         tech: ["React", "Node.js", "PostgreSQL"],
-        image: "../img/p1.png",
+        image: "../img/p_test.jpg",
         demoLink: "#",
         githubLink: "https://github.com/DaszNAQ/MemoriesWithFriends",
         time: "01/2025 - 06/2026"
@@ -49,12 +49,12 @@ export function initProjectsCarousel() {
     const project = projectsData[currentIndex];
 
     const card = document.createElement('div');
-    card.className = `project-card w-full max-w-5xl mx-auto transition-all duration-700`;
+    card.className = `project-card w-full max-w-[920px] mx-auto transition-all duration-700`;
 
     card.innerHTML = `
       <div class="glass-card rounded-3xl overflow-hidden h-[480px] md:h-[560px] relative group">
         <img src="${project.image}" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="${project.title}">
-        <div class="absolute inset-0 bg-gradient-to-r from-black/70 via-black/40 to-black/70"></div>
+        <div class="absolute inset-0 bg-linear-to-r from-black/70 via-black/40 to-black/70"></div>
         
         <!-- Content - Góc trên bên phải -->
         <div class="absolute top-8 right-8 md:top-12 md:right-12 max-w-xs text-right z-10">
@@ -64,7 +64,7 @@ export function initProjectsCarousel() {
         </div>
         
         <!-- Bottom bar -->
-        <div class="absolute bottom-0 left-0 right-0 p-8 md:p-12 z-10 bg-gradient-to-t from-black/90 to-transparent">
+        <div class="absolute bottom-0 left-0 right-0 p-8 md:p-12 z-10 bg-linear-to-t from-black/90 to-transparent">
           <div class="flex flex-wrap gap-2 mb-8">
             ${project.tech.map(t => `<span class="tech-tag text-sm px-4 py-1.5 bg-white/10 backdrop-blur-sm">${t}</span>`).join('')}
           </div>
@@ -77,7 +77,7 @@ export function initProjectsCarousel() {
             </a>
             
             <a href="${project.githubLink}" target="_blank" rel="noopener noreferrer"
-               class="project-btn flex items-center justify-center gap-3 px-8 py-4 text-base border border-white/50 hover:bg-white/10">
+               class="project-btn flex items-center justify-center gap-1 px-8 py-4 text-base border border-white/50 hover:bg-white/10">
               <i class="fa-brands fa-github"></i>
               GitHub
             </a>

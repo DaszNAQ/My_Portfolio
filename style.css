@@ -381,7 +381,7 @@ html.light .form-input {
 /* ─────────────────────────────────────────────
    RESPONSIVE TWEAKS
 ───────────────────────────────────────────── */
-@media (max-width: 640px) {
+@media (max-width: 320px) {
   .section-title { font-size: 1.75rem; }
   .orb { display: none; }
   
@@ -400,4 +400,49 @@ html.light .form-input {
 
 #projects-track {
   padding: 0 20px; /* Thêm padding cho mobile */
+}
+
+/* Projects Responsive */
+#projects .project-card {
+  max-width: 100%;
+  transition: all 0.4s ease;
+}
+
+#project-carousel {
+  padding: 0 20px;
+}
+
+/* Desktop */
+@media (min-width: 768px) {
+  #projects .project-card {
+    max-width: 920px;           /* Giữ kích thước to như banner */
+  }
+  
+  #project-carousel {
+    height: 560px;
+  }
+}
+
+/* Tablet */
+@media (max-width: 1024px) and (min-width: 640px) {
+  #projects .project-card {
+    max-width: 780px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 640px) {
+  #project-carousel {
+    height: 420px;
+    padding: 0 10px;
+  }
+  
+  #projects .project-card {
+    max-width: 100%;
+    margin: 0 10px;
+  }
+  
+  .glass-card {
+    border-radius: 20px;
+  }
 }
