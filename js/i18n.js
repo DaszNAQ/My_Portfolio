@@ -43,13 +43,14 @@ export const translations = {
     // Projects Section
     projects_title:        "Projects",
     projects_view:         "View Project",
-    projects_1_title:      "Job Tracker",
+    projects_1_title:      "Project 1",
     projects_1_desc:       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since 1966, when designers at Letraset and James Mosley, the librarian at St Bride Printing Library in London.",
-    projects_2_title:      "Portfolio Website",
+    projects_2_title:      "Project 2",
     projects_2_desc:       "Personal portfolio showcasing skills, projects, and professional experience",
-    projects_3_title:      "UI Showcase",
+    projects_3_title:      "Project 3",
     projects_3_desc:       "A collection of reusable UI components and design patterns",
-    
+    projects_4_title:      "Project 4",
+    projects_4_desc:       "A collection of reusable UI components and design patterns",
     // Experience Section
     experience_title: "Experience",
     experience_1_title: "Tech Projects & Development",
@@ -113,15 +114,16 @@ export const translations = {
         "Tập trung"],
     
     // Projects Section
-    projects_title:        "Dự án",
-    projects_view:         "Xem Dự án",
+    projects_title:        "Dự Án",
+    projects_view:         "Xem Dự Án",
     projects_1_title:      "Job Tracker",
     projects_1_desc:       "Ứng dụng web theo dõi quá trình ứng tuyển, trạng thái và lịch phỏng vấn",
     projects_2_title:      "Portfolio Website",
     projects_2_desc:       "Trang web cá nhân giới thiệu kỹ năng, dự án và kinh nghiệm làm việc",
     projects_3_title:      "UI Showcase",
     projects_3_desc:       "Bộ sưu tập các thành phần UI có thể tái sử dụng và các mẫu thiết kế",
-    
+    projects_4_title:      "444444",
+    projects_4_desc:       "Bộ sưu tập các thành phần UI có thể tái sử dụng và các mẫu thiết kế",
     // Experience Section
     experience_title: "Kinh nghiệm",
     experience_1_title: "Phát triển Dự án Công nghệ",
