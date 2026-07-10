@@ -64,10 +64,9 @@ html.light .nav-glass {
 
 .mobile-nav-link {
   display: block;
-  color: var(--text-muted);
+  color: var(--text);
   font-weight: 500;
   text-decoration: none;
-  padding: 0.4rem 0;
   transition: color 0.2s ease;
 }
 

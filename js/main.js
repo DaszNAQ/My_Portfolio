@@ -13,6 +13,8 @@ async function renderComponent(id, filePath) {
   }
 }
 
+
+
 document.addEventListener("DOMContentLoaded", async () => {
   // Nạp tất cả giao diện trước
   await Promise.all([

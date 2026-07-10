@@ -7,18 +7,19 @@ export function createProjectCard(project, isMobile = false) {
     // Mobile layout - Đơn giản, gọn hơn
     card.innerHTML = `
       <div class="glass-card rounded-3xl overflow-hidden h-[380px] relative group">
-        <img src="${project.image}" class="absolute inset-0 w-full h-full object-cover" alt="${project.title}">
-        <div class="absolute inset-0 bg-gradient-to-t from-black/90 to-black/40"></div>
+        <img src="${project.imageMobile}" class="absolute inset-0 w-full h-full object-cover" alt="${project.title}">
+        <div class="absolute inset-0 bg-linear-to-t from-black/90 to-black/40 text-center py-4">
+        <h3 class="text-2xl font-bold text-white mb-2  [text-stroke:0.5px_black] [-webkit-text-stroke:0.5px_black]">${project.title}</h3>
+        </div>
         
-        <div class="absolute bottom-0 left-0 right-0 p-6">
-          <h3 class="text-1xl font-bold text-white mb-2">${project.title}</h3>
+        <div class="absolute bottom-0 left-0 right-0 p-3">
           <div class="flex flex-wrap gap-2 mb-6">
-            ${project.tech.map(t => `<span class="tech-tag text-xs">${t}</span>`).join('')}
+            ${project.tech.map(t => `<span class="tech-tag text-primary text-xs bg-white/50 hover:bg-white/30">${t}</span>`).join('')}
           </div>
           
           <div class="flex gap-3">
-            <a href="${project.demoLink}" target="_blank" class="project-btn flex-1 py-3 text-sm" data-i18n="projects_view">View Project</a>
-            <a href="${project.githubLink}" target="_blank" class="project-btn px-6 py-3 text-sm border border-white/40">
+            <a href="${project.demoLink}" target="_blank" class="project-btn flex-1 py-2 text-primary text-sm bg-white/50 hover:bg-white/30" data-i18n="projects_view">View Project</a>
+            <a href="${project.githubLink}" target="_blank" class="project-btn px-6 py-2 text-primary text-sm bg-white/50 hover:bg-white/30 border border-white/40">
               <i class="fa-brands fa-github"></i>
             </a>
           </div>
@@ -36,7 +37,7 @@ export function createProjectCard(project, isMobile = false) {
         <div class="absolute top-12 left-6 max-w-xs z-10  align-text-top text-center">
           <h3 class="text-3xl font-bold text-white mb-3 [text-stroke:1px_black] [-webkit-text-stroke:1px_black]">${project.title}</h3>
           <p class="text-primary/90 text-sm font-bold mb-6 text-shadow-transparent">${project.time}</p>
-          <p class="text-white/90 leading-relaxed bg-black/10 text-justify">${project.desc}</p>
+          <p class="text-white/95 leading-relaxed bg-black/10 text-justify">${project.desc}</p>
         </div>
         
         <!-- Bottom bar -->

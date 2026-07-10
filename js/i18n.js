@@ -15,6 +15,7 @@ export const translations = {
     hero_subtitle: "Game Designer / QA & QC Tester",
     hero_cta_primary: "View My Projects",
     hero_cta_secondary: "Contact Me",
+    download_cv:"Download my CV",
 
     // About Section
     about_title: "About Me",
@@ -88,6 +89,7 @@ export const translations = {
     hero_subtitle: "Thiết kế Game / QA & QC Tester",
     hero_cta_primary: "Xem Dự án",
     hero_cta_secondary: "Liên hệ tôi",
+    download_cv:"Tải CV của tôi",
 
     // About Section
     about_title: "Về tôi",
