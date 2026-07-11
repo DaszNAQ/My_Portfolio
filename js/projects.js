@@ -25,8 +25,8 @@ export function initProjectsCarousel() {
         title: dict.projects_1_title,
         desc: dict.projects_1_desc,
         tech: ["React", "Node.js", "PostgreSQL"],
-        image: "../img/p1.jpg",
-        imageMobile: "../img/avt.jpg",        
+        image: "./img/p1.jpg",
+        imageMobile: "./img/avt.jpg",        
         demoLink: "#",
         githubLink: "https://github.com/DaszNAQ/MemoriesWithFriends",
         time: "01/2025 - 06/2026"
@@ -35,8 +35,8 @@ export function initProjectsCarousel() {
         title: dict.projects_2_title,
         desc: dict.projects_2_desc,
         tech: ["React", "Tailwind CSS", "Vite"],
-        image: "../img/p2.jpg",
-        imageMobile: "../img/avt.jpg",
+        image: "./img/p2.jpg",
+        imageMobile: "./img/avt.jpg",
         demoLink: "#",
         githubLink: "https://github.com/DaszNAQ/Project_CoVayVN",
         time: "02/2025 - 07/2026"
@@ -45,8 +45,8 @@ export function initProjectsCarousel() {
         title: dict.projects_3_title,
         desc: dict.projects_3_desc,
         tech: ["Figma", "HTML", "CSS"],
-        image: "../img/p3.jpg",
-        imageMobile: "../img/avt.jpg",
+        image: "./img/p3.jpg",
+        imageMobile: "./img/avt.jpg",
         demoLink: "#",
         githubLink: "https://github.com/DaszNAQ/TTTN_Laravel",
         time: "03/2025 - 08/2026"
@@ -55,8 +55,8 @@ export function initProjectsCarousel() {
         title: dict.projects_4_title,
         desc: dict.projects_4_desc,
         tech: ["React", "Tailwind CSS", "Vite"],
-        image: "../img/avt.jpg",
-        imageMobile: "../img/p1.jpg",
+        image: "./img/avt.jpg",
+        imageMobile: "./img/p1.jpg",
         demoLink: "#",
         githubLink: "https://github.com/DaszNAQ/Project_CoVayVN",
         time: "02/2025 - 07/2026"
