@@ -41,37 +41,98 @@ export function initSmoothScroll() {
   });
 }
 
+// contact.js
 export function initContactForm() {
-  const form = document.getElementById("contactForm");
+  const form = document.getElementById('contactForm');
   if (!form) return;
 
-  const validateEmail = (val) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(val);
-  const setError = (input, errorEl, show) => {
-    input.classList.toggle("error", show);
-    errorEl.classList.toggle("hidden", !show);
+  const nameInput = document.getElementById('contactName');
+  const emailInput = document.getElementById('contactEmail');
+  const msgInput = document.getElementById('contactMessage');
+
+  const nameError = document.getElementById('nameError');
+  const emailError = document.getElementById('emailError');
+  const msgError = document.getElementById('messageError');
+
+  const submitBtn = document.getElementById('submitBtn');
+  const successToast = document.getElementById('successToast');
+
+  const validateEmail = (email) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+
+  // Reset lỗi khi người dùng gõ lại
+  const resetError = (input, errorEl) => {
+    input.addEventListener('input', () => {
+      input.classList.remove('error');
+      if (errorEl) errorEl.classList.add('hidden');
+    });
   };
 
-  form.addEventListener("submit", (e) => {
+  resetError(nameInput, nameError);
+  resetError(emailInput, emailError);
+  resetError(msgInput, msgError);
+
+  // Khởi tạo EmailJS
+  emailjs.init({
+    publicKey: "e21jOODe993uBB72n",
+  });
+
+  form.addEventListener('submit', function (e) {
     e.preventDefault();
-    const name = document.getElementById("contactName");
-    const email = document.getElementById("contactEmail");
-    const msg = document.getElementById("contactMessage");
 
-    const nameOk = name.value.trim().length >= 2;
-    const emailOk = validateEmail(email.value.trim());
-    const msgOk = msg.value.trim().length >= 10;
+    const name = nameInput.value.trim();
+    const email = emailInput.value.trim();
+    const message = msgInput.value.trim();
 
-    setError(name, document.getElementById("nameError"), !nameOk);
-    setError(email, document.getElementById("emailError"), !emailOk);
-    setError(msg, document.getElementById("messageError"), !msgOk);
+    let isValid = true;
 
-    if (nameOk && emailOk && msgOk) {
-      const toast = document.getElementById("successToast");
-      toast.textContent = translations[state.currentLang].contact_success;
-      toast.classList.remove("hidden");
-      form.reset();
-      setTimeout(() => toast.classList.add("hidden"), 5000);
+    // === VALIDATION ===
+    if (name.length < 2) {
+      nameInput.classList.add('error');
+      nameError.classList.remove('hidden');
+      isValid = false;
     }
+
+    if (!validateEmail(email)) {
+      emailInput.classList.add('error');
+      emailError.classList.remove('hidden');
+      isValid = false;
+    }
+
+    if (message.length < 5) {
+      msgInput.classList.add('error');
+      msgError.classList.remove('hidden');
+      isValid = false;
+    }
+
+    // Nếu có lỗi → DỪNG, không gửi
+    if (!isValid) {
+      return;
+    }
+
+    // === GỬI EMAIL (chỉ khi hợp lệ) ===
+    const originalText = submitBtn.innerHTML;
+    submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Sending...';
+    submitBtn.disabled = true;
+
+    var templateParams = {
+      contactName : document.getElementById('contactName').value,
+      contactEmail : document.getElementById('contactEmail').value,
+      contactMessage : document.getElementById('contactMessage').value,
+    };
+
+    emailjs.send('contact_naq', 'template_h10s0iw', templateParams)
+      .then(() => {
+        successToast.classList.remove('hidden');
+        form.reset();
+        setTimeout(() => successToast.classList.add('hidden'), 6000);
+      })
+      .catch((error) => {
+        console.error('EmailJS Error:', error);
+        alert('Gửi email thất bại. Vui lòng thử lại sau.');
+      })
+      .finally(() => {
+        submitBtn.innerHTML = originalText;
+        submitBtn.disabled = false;
+      });
   });
 }
-

@@ -1,6 +1,7 @@
 import { state, applyTheme, applyLanguage, initScrollReveal } from './theme.js';
 import { initNavbar, initSmoothScroll, initContactForm } from './interactions.js';
 import { initProjectsCarousel } from './projects.js';
+
 // Hàm nạp Component (Giống như cách React nạp các Component con)
 async function renderComponent(id, filePath) {
   const container = document.getElementById(id);

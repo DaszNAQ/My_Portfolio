@@ -14,12 +14,12 @@ export function createProjectCard(project, isMobile = false) {
         
         <div class="absolute bottom-0 left-0 right-0 p-3">
           <div class="flex flex-wrap gap-2 mb-6">
-            ${project.tech.map(t => `<span class="tech-tag text-primary text-xs bg-white/50 hover:bg-white/30">${t}</span>`).join('')}
+            ${project.tech.map(t => `<span class="tech-tag text-white/80 text-xs bg-black/50">${t}</span>`).join('')}
           </div>
           
           <div class="flex gap-3">
-            <a href="${project.demoLink}" target="_blank" class="project-btn flex-1 py-2 text-primary text-sm bg-white/50 hover:bg-white/30" data-i18n="projects_view">View Project</a>
-            <a href="${project.githubLink}" target="_blank" class="project-btn px-6 py-2 text-primary text-sm bg-white/50 hover:bg-white/30 border border-white/40">
+            <a href="${project.demoLink}" target="_blank" class="project-btn flex-1 py-2 text-white text-sm bg-black/50" data-i18n="projects_view">View Project</a>
+            <a href="${project.githubLink}" target="_blank" class="project-btn px-6 py-2 text-white text-sm bg-black/50 border border-white/40">
               <i class="fa-brands fa-github"></i>
             </a>
           </div>
@@ -47,8 +47,8 @@ export function createProjectCard(project, isMobile = false) {
           </div>
           
           <div class="flex gap-4">
-            <a href="${project.demoLink}" target="_blank" class="project-btn flex-1 py-2 text-primary text-lg font-bold bg-white/50 hover:bg-white/30" data-i18n="projects_view">View Project</a>
-            <a href="${project.githubLink}" target="_blank" class="project-btn flex items-center justify-center gap-3 px-12 py-4 text-primary bg-white/50 hover:bg-white/30">
+            <a href="${project.demoLink}" target="_blank" class="project-btn flex-1 py-2 text-primary text-lg font-bold bg-white/50 hover:bg-white/70 hover:text-black/85" data-i18n="projects_view">View Project</a>
+            <a href="${project.githubLink}" target="_blank" class="project-btn flex items-center justify-center gap-3 px-12 py-4 text-primary bg-white/50 hover:bg-white/70 hover:text-black/85">
               <i class="fa-brands fa-github"></i> GitHub
             </a>
           </div>
