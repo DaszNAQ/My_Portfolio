@@ -98,7 +98,7 @@ export function initContactForm() {
       isValid = false;
     }
 
-    if (message.length < 5) {
+    if (message.length > 200) {
       msgInput.classList.add('error');
       msgError.classList.remove('hidden');
       isValid = false;

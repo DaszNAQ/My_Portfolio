@@ -16,20 +16,19 @@
           <div>
             <p class="text-xs text-gray-400 mb-1 uppercase tracking-wider" data-i18n="contact_email">Email</p>
             <a href="mailto:nq6122003@gmail.com"
-              class="font-medium hover:text-primary transition-colors break-all">nq6122003@gmail.com</a>
+              class="font-medium hover:text-secondary transition-colors break-all">nq6122003@gmail.com</a>
           </div>
         </div>
 
         <!-- Phone -->
         <div class="glass-card rounded-2xl p-6 flex items-center gap-5">
           <div
-            class="icon-circle text-secondary shrink-0 border border-primary w-12 h-12 flex items-center justify-center">
+            class="icon-circle text-primary shrink-0 border border-primary w-12 h-12 flex items-center justify-center">
             <i class="fa-solid fa-phone text-2xl"></i>
           </div>
           <div>
             <p class="text-xs text-gray-400 mb-1 uppercase tracking-wider" data-i18n="contact_phone">Phone</p>
-            <a href="tel:0914693462" class="font-medium hover:text-secondary transition-colors">0914.693.462 &
-              0365.993.614</a>
+            <a href="tel:0914693462" class="font-medium hover:text-secondary transition-colors"> +84 914 693 462</a>
           </div>
         </div>
 
@@ -41,10 +40,9 @@
           </div>
           <div>
             <p class="text-xs text-gray-400 mb-1 uppercase tracking-wider" data-i18n="about_location">Location</p>
-            <p class="font-medium">Ho Chi Minh City, Vietnam</p>
+            <a href="https://maps.app.goo.gl/qRvds7UE5xaHj2Lk9" class="font-medium hover:text-secondary transition-colors">Ho Chi Minh City, Vietnam</a>
           </div>
         </div>
-
         <!-- Social Links -->
         <div class="flex items-center justify-center gap-6 mt-8">
           <a href="https://github.com/DaszNAQ" target="_blank" rel="noopener noreferrer" class="social-btn"
@@ -64,6 +62,9 @@
 
       <!-- Right: Contact Form -->
       <div class="glass-card rounded-2xl p-8 reveal" style="transition-delay:.15s">
+        <h3 class="text-2xl font-semibold mb-8 text-center md:text-center text-secondary" data-i18n="contact_form_title">
+          Send Me a Message
+        </h3>
         <form id="contactForm" novalidate>
           <div class="mb-6">
             <label for="contactName" class="form-label" data-i18n="contact_name">Name</label>
@@ -80,7 +81,7 @@
           <div class="mb-6">
             <label for="contactMessage" class="form-label" data-i18n="contact_message">Message</label>
             <textarea id="contactMessage" name="contactMessage" rows="5" class="form-input resize-none" placeholder="Your message here..." required></textarea>
-            <p class="form-error hidden" id="messageError">Message must be at least 5 characters.</p>
+            <p class="form-error hidden" id="messageError">Message must be no more than 200 characters.</p>
           </div>
 
           <button type="submit" id="submitBtn"

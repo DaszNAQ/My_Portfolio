@@ -1,5 +1,9 @@
 <!-- ── HERO ── -->
 <section id="home" class="relative min-h-screen flex items-center overflow-hidden pt-20">
+  
+  <!-- Background Network Animation -->
+  <canvas id="hero-canvas" class="absolute inset-0 z-0 pointer-events-none"></canvas>
+
   <div class="orb orb-1"></div>
   <div class="orb orb-2"></div>
   <div class="orb orb-3"></div>
@@ -11,16 +15,16 @@
         <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight mb-6 leading-tight animate-slideUp">
           NGUYỄN ANH QUÂN
         </h1>
-        <p class="text-lg md:text-xl text-gray-400 dark:text-gray-400 max-w-xl mb-8 animate-slideUp"
+        <p class="text-lg md:text-xl text-gray-400 dark:text-gray-400 max-w-xl mb-4 animate-slideUp"
           style="animation-delay:.15s" data-i18n="hero_subtitle">
           Aspiring Business Analyst / Tech Professional
         </p>
         
         <!-- Button Download CV -->
-        <div class="mt-6 animate-slideUp py-6" style="animation-delay:.45s">
+        <div class="animate-slideUp py-6" style="animation-delay:.45s">
           <a href="../cv/NAQ_CV.pdf" 
              download="NguyenAnhQuan_CV.pdf"
-             class="inline-flex items-center gap-3 scroll-link glass-card border-white/30 px-20 py-3.5 rounded-full font-medium hover:text-primary transition-colors ">
+             class="inline-flex items-center gap-3 scroll-link glass-card border-white/50 px-20 py-3.5 rounded-full font-medium hover:text-primary transition-colors ">
             <i class="fa-solid fa-download"></i>
             <span data-i18n="download_cv">Tải CV</span>
           </a>

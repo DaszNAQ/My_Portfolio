@@ -1,6 +1,7 @@
 import { state, applyTheme, applyLanguage, initScrollReveal } from './theme.js';
 import { initNavbar, initSmoothScroll, initContactForm } from './interactions.js';
 import { initProjectsCarousel } from './projects.js';
+import { initHeroBackground } from './hero-bg.js';
 
 // Hàm nạp Component (Giống như cách React nạp các Component con)
 async function renderComponent(id, filePath) {
@@ -47,6 +48,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   initContactForm();
   initScrollReveal();
   initProjectsCarousel();
+  initHeroBackground();
 
   if (window.lucide) window.lucide.createIcons();
 });

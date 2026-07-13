@@ -52,6 +52,7 @@ export const translations = {
     projects_3_desc:       "A collection of reusable UI components and design patterns",
     projects_4_title:      "Project 4",
     projects_4_desc:       "A collection of reusable UI components and design patterns",
+    
     // Experience Section
     experience_title: "Experience",
     experience_1_title: "Tech Projects & Development",
@@ -71,7 +72,7 @@ export const translations = {
     contact_message: "Message",
     contact_submit: "Send Message",
     contact_success: "Message sent successfully! I'll get back to you soon.",
-
+    contact_form_title: "Get In Touch",
 
     footer_copyright: "© 2026 Nguyễn Anh Quân. All rights reserved.",
     
@@ -126,6 +127,7 @@ export const translations = {
     projects_3_desc:       "Bộ sưu tập các thành phần UI có thể tái sử dụng và các mẫu thiết kế",
     projects_4_title:      "444444",
     projects_4_desc:       "Bộ sưu tập các thành phần UI có thể tái sử dụng và các mẫu thiết kế",
+
     // Experience Section
     experience_title: "Kinh nghiệm",
     experience_1_title: "Phát triển Dự án Công nghệ",
@@ -145,6 +147,7 @@ export const translations = {
     contact_message: "Tin nhắn",
     contact_submit: "Gửi Tin nhắn",
     contact_success: "Tin nhắn đã được gửi thành công! Tôi sẽ liên hệ lại sớm.",
+    contact_form_title: "Liên hệ trực tiếp đến tôi",
     
     
     footer_copyright: "© 2026 Nguyễn Anh Quân. Mọi quyền được bảo lưu.",
