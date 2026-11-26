@@ -68,7 +68,7 @@ export const translations = {
     contact_title: "Contact",
     contact_name: "Name",
     contact_email: "Email",
-    contact_phone: "Phone",
+    contact_phone: "Phone Number",
     contact_message: "Message",
     contact_submit: "Send Message",
     contact_success: "Message sent successfully! I'll get back to you soon.",

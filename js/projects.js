@@ -1,5 +1,6 @@
 // js/projects.js
 import { translations } from "./i18n.js";
+import { state } from "./theme.js";
 import { createProjectCard } from "./projects-card.js";
 
 export function initProjectsCarousel() {
@@ -32,62 +33,44 @@ export function initProjectsCarousel() {
   };
 
   function getCurrentLanguage() {
-    let savedLanguage = "en";
+  return translations[state.currentLang] || translations.en;
+  }
+
+  let projectsSource = [];
+
+  async function loadProjects() {
     try {
-      savedLanguage = localStorage.getItem("portfolio-lang") || "en";
-    } catch {
-      // Use English if browser storage is unavailable.
+      const response = await fetch("./data/projects.json", { cache: "no-cache" });
+      if (!response.ok) throw new Error(`HTTP ${response.status}`);
+      const json = await response.json();
+      projectsSource = Array.isArray(json.projects)
+        ? json.projects.filter((project) => project.visible !== false)
+        : [];
+    } catch (error) {
+      console.error("Không thể tải data/projects.json:", error);
+      projectsSource = [];
     }
-    const lang = window.currentLang || savedLanguage;
-    return translations[lang] || translations.en;
+  }
+
+  // Giá trị có thể là chuỗi hoặc {en, vi}; thiếu ngôn ngữ thì dùng ngôn ngữ còn lại.
+  function pickText(value) {
+    if (value && typeof value === "object") {
+      return value[state.currentLang] || value.en || value.vi || "";
+    }
+    return value || "";
   }
 
   function getProjectsData() {
-    const dict = getCurrentLanguage();
-
-    // Giữ dữ liệu mẫu hiện tại; có thể thay các object này bằng project thực tế.
-    return [
-      {
-        title: dict.projects_1_title,
-        desc: dict.projects_1_desc,
-        tech: ["React", "Node.js", "PostgreSQL"],
-        image: "./img/p1.jpg",
-        imageMobile: "./img/avt.jpg",
-        demoLink: "#",
-        githubLink: "https://github.com/DaszNAQ/MemoriesWithFriends",
-        time: "01/2025 - 06/2026",
-      },
-      {
-        title: dict.projects_2_title,
-        desc: dict.projects_2_desc,
-        tech: ["React", "Tailwind CSS", "Vite"],
-        image: "./img/p2.jpg",
-        imageMobile: "./img/avt.jpg",
-        demoLink: "#",
-        githubLink: "https://github.com/DaszNAQ/Project_CoVayVN",
-        time: "02/2025 - 07/2026",
-      },
-      {
-        title: dict.projects_3_title,
-        desc: dict.projects_3_desc,
-        tech: ["Figma", "HTML", "CSS"],
-        image: "./img/p3.jpg",
-        imageMobile: "./img/avt.jpg",
-        demoLink: "#",
-        githubLink: "https://github.com/DaszNAQ/TTTN_Laravel",
-        time: "03/2025 - 08/2026",
-      },
-      {
-        title: dict.projects_4_title,
-        desc: dict.projects_4_desc,
-        tech: ["React", "Tailwind CSS", "Vite"],
-        image: "./img/avt.jpg",
-        imageMobile: "./img/p1.jpg",
-        demoLink: "#",
-        githubLink: "https://github.com/DaszNAQ/Project_CoVayVN",
-        time: "02/2025 - 07/2026",
-      },
-    ];
+    return projectsSource.map((project) => ({
+      title: pickText(project.title),
+      desc: pickText(project.desc),
+      tech: Array.isArray(project.tech) ? project.tech : [],
+      image: project.image,
+      imageMobile: project.imageMobile || project.image,
+      demoLink: project.demoLink || "",
+      githubLink: project.githubLink || "",
+      time: project.time || "",
+    }));
   }
 
   function updateTrackPosition() {
@@ -426,5 +409,5 @@ export function initProjectsCarousel() {
   });
 
   document.addEventListener("languageChanged", renderProjects);
-  renderProjects();
+  loadProjects().then(renderProjects);
 }

@@ -1,0 +1,78 @@
+# Đổi 3 dòng đầu khi tái sử dụng cho site khác.
+backend:
+  name: github
+  repo: DaszNAQ/My_Portfolio
+  branch: main
+
+media_folder: img/projects # nơi lưu ảnh upload trong repo
+public_folder: ./img/projects # đường dẫn ghi vào JSON (tương đối với index.html)
+
+locale: vi
+
+collections:
+  - name: data
+    label: Nội dung
+    files:
+      - name: projects
+        label: Projects
+        file: data/projects.json
+        format: json
+        fields:
+          - name: projects
+            label: Danh sách project (kéo thả để đổi thứ tự)
+            widget: list
+            summary: "{{fields.title.en}}"
+            fields:
+              - name: title
+                label: Tiêu đề
+                widget: object
+                fields:
+                  - name: en
+                    label: English
+                    widget: string
+                  - name: vi
+                    label: Tiếng Việt
+                    widget: string
+                    required: false
+              - name: desc
+                label: Mô tả
+                widget: object
+                fields:
+                  - name: en
+                    label: English
+                    widget: text
+                  - name: vi
+                    label: Tiếng Việt
+                    widget: text
+                    required: false
+              - name: time
+                label: Thời gian
+                widget: string
+                required: false
+                hint: "vd: 01/2025 - 06/2026"
+              - name: tech
+                label: Công nghệ
+                widget: list
+                field:
+                  name: item
+                  label: Tên
+                  widget: string
+              - name: image
+                label: Ảnh desktop
+                widget: image
+              - name: imageMobile
+                label: Ảnh mobile (bỏ trống = dùng ảnh desktop)
+                widget: image
+                required: false
+              - name: demoLink
+                label: Link demo (bỏ trống = ẩn nút View Project)
+                widget: string
+                required: false
+              - name: githubLink
+                label: Link GitHub
+                widget: string
+                required: false
+              - name: visible
+                label: Hiển thị trên site
+                widget: boolean
+                default: true

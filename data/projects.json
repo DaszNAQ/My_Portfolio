@@ -1,0 +1,88 @@
+{
+  "projects": [
+    {
+      "title": {
+        "en": "Project 1",
+        "vi": "Job Tracker"
+      },
+      "desc": {
+        "en": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since 1966, when designers at Letraset and James Mosley, the librarian at St Bride Printing Library in London.",
+        "vi": "Ứng dụng web theo dõi quá trình ứng tuyển, trạng thái và lịch phỏng vấn"
+      },
+      "time": "01/2025 - 06/2026",
+      "tech": [
+        "React",
+        "Node.js",
+        "PostgreSQL"
+      ],
+      "image": "./img/p1.jpg",
+      "imageMobile": "./img/avt.jpg",
+      "demoLink": "#",
+      "githubLink": "https://github.com/DaszNAQ/MemoriesWithFriends",
+      "visible": true
+    },
+    {
+      "title": {
+        "en": "Project 2",
+        "vi": "Portfolio Website"
+      },
+      "desc": {
+        "en": "Personal portfolio showcasing skills, projects, and professional experience",
+        "vi": "Trang web cá nhân giới thiệu kỹ năng, dự án và kinh nghiệm làm việc"
+      },
+      "time": "02/2025 - 07/2026",
+      "tech": [
+        "React",
+        "Tailwind CSS",
+        "Vite"
+      ],
+      "image": "./img/p2.jpg",
+      "imageMobile": "./img/avt.jpg",
+      "demoLink": "#",
+      "githubLink": "https://github.com/DaszNAQ/Project_CoVayVN",
+      "visible": true
+    },
+    {
+      "title": {
+        "en": "Project 3",
+        "vi": "UI Showcase"
+      },
+      "desc": {
+        "en": "A collection of reusable UI components and design patterns",
+        "vi": "Bộ sưu tập các thành phần UI có thể tái sử dụng và các mẫu thiết kế"
+      },
+      "time": "03/2025 - 08/2026",
+      "tech": [
+        "Figma",
+        "HTML",
+        "CSS"
+      ],
+      "image": "./img/p3.jpg",
+      "imageMobile": "./img/avt.jpg",
+      "demoLink": "#",
+      "githubLink": "https://github.com/DaszNAQ/TTTN_Laravel",
+      "visible": true
+    },
+    {
+      "title": {
+        "en": "Project 4",
+        "vi": "444444"
+      },
+      "desc": {
+        "en": "A collection of reusable UI components and design patterns",
+        "vi": "Bộ sưu tập các thành phần UI có thể tái sử dụng và các mẫu thiết kế"
+      },
+      "time": "02/2025 - 07/2026",
+      "tech": [
+        "React",
+        "Tailwind CSS",
+        "Vite"
+      ],
+      "image": "./img/avt.jpg",
+      "imageMobile": "./img/p1.jpg",
+      "demoLink": "#",
+      "githubLink": "https://github.com/DaszNAQ/Project_CoVayVN",
+      "visible": true
+    }
+  ]
+}
