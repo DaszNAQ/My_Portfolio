@@ -60,13 +60,21 @@ export function initProjectsCarousel() {
     return value || "";
   }
 
+  // Admin lưu ảnh dạng "/img/projects/x.jpg"; đổi thành "./img/..." để chạy được cả
+  // trên GitHub Pages (thư mục con /My_Portfolio/), Live Server và tên miền riêng.
+  function resolvePath(path) {
+    return typeof path === "string" && path.startsWith("/") && !path.startsWith("//")
+      ? `.${path}`
+      : path;
+  }
+
   function getProjectsData() {
     return projectsSource.map((project) => ({
       title: pickText(project.title),
       desc: pickText(project.desc),
       tech: Array.isArray(project.tech) ? project.tech : [],
-      image: project.image,
-      imageMobile: project.imageMobile || project.image,
+      image: resolvePath(project.image),
+      imageMobile: resolvePath(project.imageMobile || project.image),
       demoLink: project.demoLink || "",
       githubLink: project.githubLink || "",
       time: project.time || "",

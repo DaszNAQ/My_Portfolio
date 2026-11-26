@@ -5,7 +5,7 @@ backend:
   branch: main
 
 media_folder: img/projects # nơi lưu ảnh upload trong repo
-public_folder: ./img/projects # đường dẫn ghi vào JSON (tương đối với index.html)
+public_folder: /img/projects # đường dẫn ghi vào JSON (tương đối với index.html)
 
 locale: vi
 
